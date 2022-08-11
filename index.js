@@ -25,7 +25,6 @@ function loadDoc() {
                 const sign = document.createElement("a")
                 sign.className = "sign";
                 sign.href = `./album.html?id=` + ele;
-                sign.target ="_blank"
                 sign.innerHTML = ">";
                 title.innerHTML = `Visit Album ${ele}`
                 card.appendChild(title)
