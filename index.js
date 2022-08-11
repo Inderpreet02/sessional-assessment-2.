@@ -16,6 +16,23 @@ function loadDoc() {
             });
 
             console.log(users);
+
+            users.forEach(ele => {
+                const title = document.createElement("div");
+                title.className = "title";
+                const card = document.createElement("div")
+                card.className = "album__card";
+                const sign = document.createElement("a")
+                sign.className = "sign";
+                sign.href = `./album.html?id=` + ele;
+                sign.target ="_blank"
+                sign.innerHTML = ">";
+                title.innerHTML = `Visit Album ${ele}`
+                card.appendChild(title)
+                card.appendChild(sign)
+                // document.getElementsByClassName("album__grid").appendChild(card)
+                document.getElementById("grid").appendChild(card)
+            })
         }
     };
     xhttp.open("GET", "https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09", true);
