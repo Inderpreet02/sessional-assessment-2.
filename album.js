@@ -1,7 +1,8 @@
 const params = new URLSearchParams(window.location.search)
 const book = params.get('id')
 // console.log(params.get('id'));
-
+document.getElementById('main__title').innerHTML = "Album Selected is " + book; 
+ 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -17,11 +18,23 @@ function loadDoc() {
 
                     images.push(element)
                     const temp = document.createElement('div')
-                    temp.innerHTML = element.title;
-                    document.getElementById('root').appendChild(temp)
+                    const img = document.createElement('img')
+                    const title = document.createElement('div')
+                    temp.className = "album__card"
+                    title.innerHTML = "Image id " + element.id + ": " + element.title;
+                    img.className = "card__img"
+                    title.className = "title"
+                    img.src = element.url
+                    temp.appendChild(img)
+                    temp.appendChild(title)
+                    document.getElementById('grid').appendChild(temp)
                     console.log(element);
                 }
             });
+
+            images.forEach(ele => {
+
+            })
 
             console.log(images);
         }
