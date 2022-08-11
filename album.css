@@ -106,4 +106,57 @@ body{
 .title{
     padding: 20px;
     color: #333;
+    
 }
+
+.footer{
+    margin-top: 200px;
+    background-color: blue;
+    height: 40vh;
+}
+
+.footer__container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.footer__logo{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.footer__left{
+    flex: 1;
+}
+
+.footer__right{
+    flex: 1;
+}
+
+.footer__copy{
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .album__grid{
+        grid-template-columns: repeat(1, 100%);
+        margin: 20px; 
+    }
+
+    .album__card{
+        width: 100%;
+        height: fit-content;
+        
+    }
+
+    .card__img{
+        width: 100%;
+    }
+  }
+  

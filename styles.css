@@ -94,12 +94,15 @@ body{
 
 .album{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: fit-content;
+    margin-top: 100px;
 }
 
 .album__container{
     max-width: 1100px;
     margin: auto;
+    height: 100%;
 }
 
 .album__container h1{
@@ -113,7 +116,7 @@ body{
     justify-content: center;
     align-items: center;
     grid-gap: 10px;
-    height: 100%;
+    height: fit-content;
 }
 
 .album__card{
@@ -154,5 +157,97 @@ body{
 /* form */
 
 .footer{
+    margin-top: 200px;
     background-color: blue;
+    height: 40vh;
 }
+
+.footer__container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.footer__logo{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.footer__left{
+    flex: 1;
+}
+
+.footer__right{
+    flex: 1;
+}
+
+.footer__copy{
+    margin-top: 50px;
+}
+
+.form{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.form__container{
+    width: 700px;
+    padding: 20px;
+    border: 1px solid blue;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__container input, textarea, .btn, h1{
+    padding: 20px;
+    margin: 20px;
+}
+
+.btn{
+    background-color: #fff;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+    .album__grid{
+        grid-template-columns: repeat(3, 30%);
+    }
+
+    .form{
+        display: none;
+    }
+
+    .footer{
+        height: 20vh;
+        width: 100%;
+    }
+
+    .footer__text{
+        display: none;
+    }
+
+    .main__container{
+        display: none;
+    }
+
+    .album{
+        margin-top: -800px;
+    }
+  }
+
+@media only screen and (max-width: 900px) {
+    .album__grid{
+        grid-template-columns: repeat(1, 80%);
+    }
+  }
